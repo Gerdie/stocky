@@ -1,6 +1,4 @@
 // Run this function after the page has loaded
-$(function () {
-
 var stocks = [
   "MBOT", // Microbot Medical, http://finance.yahoo.com/quote/MBOT
   "DLB", // Dolby Laboratories, https://finance.yahoo.com/quote/DLB
@@ -8,7 +6,9 @@ var stocks = [
   //"CL=F", // Crude oil, http://finance.yahoo.com/quote/CL=F?p=CL=F
   //"GC=F", // Gold, https://finance.yahoo.com/quote/GC=F?p=GC=F
   //"SI=F"  // Silver, https://finance.yahoo.com/quote/SI=F?p=SI=F
-]
+];
+
+$(function () {
 
 var fields = 'f=pl1' // Requests the current price and previous closing price
 var symbols = 's=' + stocks.join('+')

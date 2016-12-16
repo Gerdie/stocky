@@ -13,47 +13,60 @@
     <script>delete module.exports</script>
     <script src="./vendor/jquery-3.1.1.js"></script>
     <script src="./window.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      function addStock (form) {
+        var newStock = form.stockcode.value;
+        console.log ("You typed: " + newStock);
+        stocks.push(newStock);
+        console.log(stocks);
+      }
+    </script>
 
   </head>
   <body>
     <div id="container" class="container-fluid">
-      <form action="POST">
-        <label for="stockcode">Add a Stock:</label>
+      <form method="POST" name="stockAdder">
+        <label>Add A Stock:</label>
         <input type="text" name="stockcode">
+        <input type="button" value="Submit" onClick="addStock(this.form)">
       </form>
 
-      <!-- Oil Row -->
-      <div class="row oil">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
-          <h1>Oil <small>per barrel</small></h1>
-          <h2>
-            <span id="oil-price" class="price"></span>
-            <small id="oil-change" class="change"></small>
-          </h2>
-        </div>
-      </div>
+      <div class="stock-container">
 
-      <!-- Gold Row -->
-      <div class="row gold">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <h1>Gold <small>per ounce</small></h1>
-          <h2>
-            <span id="gold-price" class="price"></span>
-            <small id="gold-change" class="change"></small>
-          </h2>
+        <!-- First Stock -->
+        <div class="row oil">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+            <h1>Stock 1</h1>
+            <h2>
+              <span id="oil-price" class="price"></span>
+              <small id="oil-change" class="change"></small>
+            </h2>
+          </div>
         </div>
-      </div>
 
-      <!-- Silver Row -->
-      <div class="row silver">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <h1 class="silver">Silver <small>per ounce</small></h1>
-          <h2>
-            <span id="silver-price" class="price"></span>
-            <small id="silver-change" class="change"></small>
-          </h2>
+        <!-- Second Stock -->
+        <div class="row gold">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h1>Stock 2</h1>
+            <h2>
+              <span id="gold-price" class="price"></span>
+              <small id="gold-change" class="change"></small>
+            </h2>
+          </div>
         </div>
-      </div>
+
+        <!-- Third Stock -->
+        <div class="row silver">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h1>Stock 3</h1>
+            <h2>
+              <span id="silver-price" class="price"></span>
+              <small id="silver-change" class="change"></small>
+            </h2>
+          </div>
+        </div>
+
+      </div>  <!--end stock-container-->
 
     </div>
   </body>
