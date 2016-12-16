@@ -13,16 +13,16 @@
   color: #E5E5E5;
 }*/
 
-div.bg-0 {
-  background-color: #95ccb2;
+div.bg-0, div.bg-5 {
+  background-color: #ff706b;
 }
 
-div.bg-1 {
+div.bg-1, div.bg-6 {
   background-color: #ffedad;
 }
 
-div.bg-2 {
-  background-color: #ff706b;
+div.bg-2, div.bg-7 {
+  background-color: #95ccb2;
 }
 
 div.bg-3 {
