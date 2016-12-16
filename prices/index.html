@@ -16,9 +16,17 @@
     <script type="text/javascript">
       function addStock (form) {
         var newStock = form.stockcode.value;
-        console.log ("You typed: " + newStock);
         stocks.push(newStock);
         console.log(stocks);
+        $('#stock-container').append('<div class="row oil">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+            <h1>Stock 1</h1>
+            <h2>
+              <span id="oil-price" class="price"></span>
+              <small id="oil-change" class="change"></small>
+            </h2>
+          </div>
+        </div>')
       }
     </script>
 
@@ -31,7 +39,7 @@
         <input type="button" value="Submit" onClick="addStock(this.form)">
       </form>
 
-      <div class="stock-container">
+      <div id="stock-container">
 
         <!-- First Stock -->
         <div class="row oil">
