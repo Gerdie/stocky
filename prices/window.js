@@ -41,6 +41,7 @@ var getPrices = function() {
 
       $('#' + i + '-price').text(currentPrice.toLocaleString());
       $('#' + i + '-change').text(change);
+      $('#' + i + '-name').text(stocks[i]);
 
       // if (i == 0) { // Oil
       //   $('#oil-price').text(currentPrice.toLocaleString());
