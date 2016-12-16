@@ -18,15 +18,10 @@
         var newStock = form.stockcode.value;
         stocks.push(newStock);
         console.log(stocks);
-        $('#stock-container').append('<div class="row oil">
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
-            <h1>Stock 1</h1>
-            <h2>
-              <span id="oil-price" class="price"></span>
-              <small id="oil-change" class="change"></small>
-            </h2>
-          </div>
-        </div>')
+        console.log(stocks.length)
+        var stockLength = stocks.length - 1
+        $('#stock-container').prepend("<div class='row fourth'><div class='col-xs-12 col-sm-12 col-md-12 col-lg-12 '><h1>Stock " + stocks.length + "</h1><h2><span id='" + stockLength + "-price' class='price'></span><small id='" + stockLength + "-change' class='change'></small></h2></div></div>");
+        getPrices();
       }
     </script>
 
@@ -46,8 +41,8 @@
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
             <h1>Stock 1</h1>
             <h2>
-              <span id="oil-price" class="price"></span>
-              <small id="oil-change" class="change"></small>
+              <span id="0-price" class="price"></span>
+              <small id="0-change" class="change"></small>
             </h2>
           </div>
         </div>
@@ -57,8 +52,8 @@
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <h1>Stock 2</h1>
             <h2>
-              <span id="gold-price" class="price"></span>
-              <small id="gold-change" class="change"></small>
+              <span id="1-price" class="price"></span>
+              <small id="1-change" class="change"></small>
             </h2>
           </div>
         </div>
@@ -68,8 +63,8 @@
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <h1>Stock 3</h1>
             <h2>
-              <span id="silver-price" class="price"></span>
-              <small id="silver-change" class="change"></small>
+              <span id="2-price" class="price"></span>
+              <small id="2-change" class="change"></small>
             </h2>
           </div>
         </div>
