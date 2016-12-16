@@ -2,13 +2,18 @@
 $(function () {
 
 var stocks = [
-  "CL=F", // Crude oil, http://finance.yahoo.com/quote/CL=F?p=CL=F
-  "GC=F", // Gold, https://finance.yahoo.com/quote/GC=F?p=GC=F
-  "SI=F"  // Silver, https://finance.yahoo.com/quote/SI=F?p=SI=F
+  "MBOT", // Microbot Medical, http://finance.yahoo.com/quote/MBOT
+  "DLB", // Dolby Laboratories, https://finance.yahoo.com/quote/DLB
+  "GPS" // The Gap stock... https://finance.yahoo.com/quote/GPS
+  //"CL=F", // Crude oil, http://finance.yahoo.com/quote/CL=F?p=CL=F
+  //"GC=F", // Gold, https://finance.yahoo.com/quote/GC=F?p=GC=F
+  //"SI=F"  // Silver, https://finance.yahoo.com/quote/SI=F?p=SI=F
 ]
 
 var fields = 'f=pl1' // Requests the current price and previous closing price
 var symbols = 's=' + stocks.join('+')
+// var url = 'https://finance.yahoo.com/d/quotes.csv?' + fields + '&' + symbols
+//http://finance.yahoo.com/d/quotes.csv?s={SYMBOLS}&f={DATA THAT WE WANT}
 var url = 'https://finance.yahoo.com/d/quotes.csv?' + fields + '&' + symbols
 
 $.ajax(url).done(function (csv) {
