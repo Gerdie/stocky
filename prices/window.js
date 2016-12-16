@@ -15,7 +15,6 @@ var getPrices = function() {
   $.ajax(url).done(function (csv) {
     // Split the output up into an array of lines
     var lines = csv.trim().split('\n');
-    console.log("Lines!   !!!");
     console.log(lines);
 
     // Iterate over each line

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title>Current Prices</title>
+    <title>Stocky</title>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="./vendor/bootstrap-3.3.7.css">
@@ -18,8 +18,12 @@
         var newStock = form.stockcode.value;
         stocks.push(newStock);
         console.log(stocks);
-        console.log(stocks.length)
-        var stockLength = stocks.length - 1
+        if (stocks.length > 5) {
+          stocks = stocks.slice(-5);
+        }
+        console.log(stocks.length);
+        console.log(stocks);
+        var stockLength = stocks.length - 1;
         $('#stock-container').prepend("<div class='row bg-" + stockLength + "'><div class='col-xs-12 col-sm-12 col-md-12 col-lg-12 '><h1 id='" + stockLength + "-name'></h1><h2><span id='" + stockLength + "-price' class='price'></span><small id='" + stockLength + "-change' class='change'></small></h2></div></div>");
         getPrices();
       }
@@ -37,18 +41,18 @@
       <div id="stock-container">
 
         <!-- First Stock -->
-        <div class="row oil bg-0">
+        <div class="row bg-2">
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
-            <h1 id="0-name"></h1>
+            <h1 id="2-name"></h1>
             <h2>
-              <span id="0-price" class="price"></span>
-              <small id="0-change" class="change"></small>
+              <span id="2-price" class="price"></span>
+              <small id="2-change" class="change"></small>
             </h2>
           </div>
         </div>
 
         <!-- Second Stock -->
-        <div class="row gold bg-1">
+        <div class="row bg-1">
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <h1 id="1-name"></h1>
             <h2>
@@ -59,12 +63,12 @@
         </div>
 
         <!-- Third Stock -->
-        <div class="row silver bg-2">
+        <div class="row bg-0">
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <h1 id="2-name"></h1>
+            <h1 id="0-name"></h1>
             <h2>
-              <span id="2-price" class="price"></span>
-              <small id="2-change" class="change"></small>
+              <span id="0-price" class="price"></span>
+              <small id="0-change" class="change"></small>
             </h2>
           </div>
         </div>
